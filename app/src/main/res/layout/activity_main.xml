@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/plaintext_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/enter_your_plaintext"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/plaintext_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="18dp"
+        app:layout_constraintEnd_toEndOf="@id/plaintext_tv"
+        app:layout_constraintStart_toStartOf="@id/plaintext_tv"
+        app:layout_constraintTop_toBottomOf="@id/plaintext_tv" />
+
+    <TextView
+        android:id="@+id/key_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/enter_your_key"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/plaintext_et"
+        app:layout_constraintStart_toStartOf="@id/plaintext_et"
+        app:layout_constraintTop_toBottomOf="@id/plaintext_et" />
+
+    <EditText
+        android:id="@+id/key_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="18dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="18dp"
+        app:layout_constraintEnd_toEndOf="@id/plaintext_tv"
+        app:layout_constraintStart_toStartOf="@id/plaintext_tv"
+        app:layout_constraintTop_toBottomOf="@id/key_tv" />
+
+    <TextView
+        android:id="@+id/encryption_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/the_encrypted_text"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/plaintext_et"
+        app:layout_constraintStart_toStartOf="@id/plaintext_et"
+        app:layout_constraintTop_toBottomOf="@id/key_et" />
+
+    <TextView
+        android:id="@+id/encrypted_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:textColor="#3F51B5"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@id/plaintext_et"
+        app:layout_constraintStart_toStartOf="@id/plaintext_et"
+        app:layout_constraintTop_toBottomOf="@id/encryption_tv" />
+
+    <Button
+        android:id="@+id/encrypt_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="24dp"
+        android:text="Encrypt the text"
+        android:textColor="#111111"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@id/encrypted_tv"
+        app:layout_constraintStart_toStartOf="@id/encrypted_tv"
+        app:layout_constraintTop_toBottomOf="@id/encrypted_tv" />
+</androidx.constraintlayout.widget.ConstraintLayout>
